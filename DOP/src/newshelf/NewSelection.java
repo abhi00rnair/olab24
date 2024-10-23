@@ -1,9 +1,10 @@
 package newshelf;
 
 import oldshelf.Book;
-import oldshelf.Comic;
-import oldshelf.Fiction;
-import oldshelf.TextBook;
+import oldshelf.FictionType;
+//import oldshelf.Comic;
+//import oldshelf.Fiction;
+//import oldshelf.TextBook;
 
 public class NewSelection {
 
@@ -17,21 +18,29 @@ public class NewSelection {
 	public static String getAgeOrTitle(Object o) {
 		if(!(o instanceof Book)){
 			return "";
-		}if(o instanceof Comic){
-			return ((Comic)o).gettitle();
-		}if (o instanceof Fiction) {
-			return ((Fiction)o).getname();
-		}else {
-			return ((TextBook)o).getsubject();
+		}if (o instanceof comic1  c1) {
+			return c1.title();
+		}if(o instanceof Fiction1 f1){
+			return f1.name();
 		}
-		
+		if(o instanceof textbook1 t1){
+			return t1.subject();
+		}
+		return "";
 	}
 
 	public static void main(String[] args) {
 		
 		// TODO: Write a test code here and execute and text.
-		TextBook t = new TextBook("physics");
+		//TextBook t = new TextBook("physics");
+		textbook1 t=new textbook1("gdsc");
+		Fiction1 f1=new Fiction1("fic1", FictionType.Comedy);
+		comic1 c1=new comic1("comeddd", 020);
+		String res1=getAgeOrTitle(f1);
+		String res2=getAgeOrTitle(c1);
 		String result=getAgeOrTitle(t);
 		System.out.println(result);
-	}
+		System.out.println(res1);
+		System.out.println(res2);
+}
 }

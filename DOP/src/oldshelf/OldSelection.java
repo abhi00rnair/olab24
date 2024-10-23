@@ -23,7 +23,7 @@ public class OldSelection {
 
 	public static void main(String[] args) {
 		
-		// TODO: Write a test code here and execute and text.
+		// TODO: Write a test code here and execute and txt.
 		TextBook t = new TextBook("maths");
 		String res=getAgeOrTitle(t);
 		System.out.println(res);

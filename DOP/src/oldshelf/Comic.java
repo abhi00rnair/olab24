@@ -2,6 +2,7 @@ package oldshelf;
 
 public class Comic extends Book {
 
+
 	/* TODO: Add most strict modifiers here*/ //done
 	public String Title;
 
@@ -54,5 +55,9 @@ public class Comic extends Book {
 		}else{
 			return false;
 		}
+	
 	}
 }
+
+
+
