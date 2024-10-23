@@ -1,5 +1,7 @@
 package oldshelf;
 
+
+
 public class OldSelection {
 
 	// TODO: Complete this method.
@@ -25,6 +27,9 @@ public class OldSelection {
 		
 		// TODO: Write a test code here and execute and txt.
 		TextBook t = new TextBook("maths");
+		Comic c= new Comic("comicc");
+		System.out.println(c);
+
 		String res=getAgeOrTitle(t);
 		System.out.println(res);
 		
