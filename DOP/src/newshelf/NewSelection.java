@@ -1,6 +1,6 @@
 package newshelf;
 
-import oldshelf.Book;
+//import oldshelf.Book;
 import oldshelf.FictionType;
 //import oldshelf.Comic;
 //import oldshelf.Fiction;
@@ -16,15 +16,15 @@ public class NewSelection {
 	 * returns name, and if TextBook, returns subject.
 	 */
 	public static String getAgeOrTitle(Object o) {
-		if(!(o instanceof Book)){
+		if(!(o instanceof IBook)){
 			return "";
 		}if (o instanceof comic1  c1) {
 			return c1.title();
 		}if(o instanceof Fiction1 f1){
 			return f1.name();
 		}
-		if(o instanceof textbook1 t1){
-			return t1.subject();
+		if(o instanceof textbook1){
+			return ((textbook1)o).subject();
 		}
 		return "";
 	}
